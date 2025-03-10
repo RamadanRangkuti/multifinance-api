@@ -128,8 +128,6 @@ func (s *store) GetUserDetail(req model.Users) (*model.Users, error) {
 		ORDER BY created_at DESC limit 1
 	`
 
-	fmt.Println("Executing query:", queryArgs)
-
 	var response model.Users
 	rows, err := s.db.Query(queryArgs)
 	if err != nil {

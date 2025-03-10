@@ -40,13 +40,20 @@ func LoggerMiddleware() func(http.Handler) http.Handler {
 	}
 }
 
-func ApplyMiddleware(h http.HandlerFunc, middlewares ...func(http.Handler) http.Handler) http.HandlerFunc {
-	handler := http.Handler(h)
+// func ApplyMiddleware(h http.HandlerFunc, middlewares ...func(http.Handler) http.Handler) http.HandlerFunc {
+// 	handler := http.Handler(h)
+// 	for _, middleware := range middlewares {
+// 		handler = middleware(handler)
+// 	}
+
+// 	return handler.ServeHTTP
+// }
+
+func ApplyMiddleware(handler http.Handler, middlewares ...func(http.Handler) http.Handler) http.Handler {
 	for _, middleware := range middlewares {
 		handler = middleware(handler)
 	}
-
-	return handler.ServeHTTP
+	return handler
 }
 
 func IsSlice(v interface{}) bool {

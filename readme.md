@@ -106,12 +106,13 @@ API ini adalah aplikasi layanan multifinance yang dikembangkan menggunakan Golan
 ## System Architecture
 structure
 
-![alt text ](https://github.com/RamadanRangkuti/multifinance-api/development/structure.png?raw=true)
-
-<br />
+![alt text ](https://github.com/RamadanRangkuti/multifinance-api/blob/development/structure.png?raw=true)
 
 <br />
 Database Diagram
+
+![alt text ](https://github.com/RamadanRangkuti/multifinance-api/blob/development/erd.png?raw=true)
+<br />
 
 
 ## Teknologi yang Digunakan
